@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-FROM adoptopenjdk:8u222-b10-jdk-openj9-0.15.1
+FROM --platform=arm64 eclipse-temurin:8-jre
 COPY scripts /tmp/scripts
 RUN cd /tmp/scripts && \
     common/packages.sh && \

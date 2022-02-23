@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-FROM debian:buster-20190910-slim as download
+FROM --platform=arm64 debian:buster-20190910-slim as download
 # Based on https://github.com/31z4/zookeeper-docker/blob/master/3.4.9/Dockerfile
 RUN apt-get update \
     && apt-get install -y curl tar git make gcc
@@ -29,7 +29,7 @@ RUN set -x \
     && mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR"
 
 
-FROM adoptopenjdk:8u222-b10-jre-openj9-0.15.1
+FROM --platform=arm64 eclipse-temurin:8-jre
 ARG DISTRO_NAME=zookeeper-3.4.14
 ENV ZOO_USER=zookeeper \
     ZOO_CONF_DIR=/conf \
