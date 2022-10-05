@@ -18,7 +18,7 @@ apt-get update -qq
 # apt-get dist-upgrade -qqy
 
 # install common tools
-COMMON_TOOLS="wget git net-tools netcat-openbsd autoconf automake libtool curl make g++8 unzip build-essential"
+COMMON_TOOLS="wget git net-tools netcat-openbsd autoconf automake libtool curl make g++ unzip build-essential"
 #apt-get install -y git net-tools netcat-openbsd
 apt-get install -y $COMMON_TOOLS
 

@@ -20,7 +20,7 @@ RUN echo "${KAFKA_DOWNLOAD_SHA1}  kafka.tgz" | sha1sum -c - \
     && tar xfz kafka.tgz -C /opt/kafka --strip-components=1 \
     && rm -f kafka.tgz;
 
-FROM --platform=arm64 eclipse-temurin:8-jre
+FROM --platform=arm64 eclipse-temurin:8-jre-focal
 COPY --from=download /opt/kafka /opt/kafka
 ADD ./kafka-run-class.sh /opt/kafka/bin/kafka-run-class.sh
 ADD ./docker-entrypoint.sh /docker-entrypoint.sh

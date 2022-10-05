@@ -29,7 +29,7 @@ RUN set -x \
     && mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR"
 
 
-FROM --platform=arm64 eclipse-temurin:8-jre
+FROM --platform=arm64 eclipse-temurin:8-jre-focal
 ARG DISTRO_NAME=zookeeper-3.4.14
 ENV ZOO_USER=zookeeper \
     ZOO_CONF_DIR=/conf \
