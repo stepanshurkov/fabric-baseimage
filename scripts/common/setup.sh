@@ -15,10 +15,10 @@ set -x
 
 # Update the entire system to the latest releases
 apt-get update -qq
-apt-get dist-upgrade -qqy
+# apt-get dist-upgrade -qqy
 
 # install common tools
-COMMON_TOOLS="wget git net-tools netcat-openbsd autoconf automake libtool curl make g++ unzip build-essential"
+COMMON_TOOLS="wget git net-tools netcat-openbsd autoconf automake libtool curl make g++8 unzip build-essential"
 #apt-get install -y git net-tools netcat-openbsd
 apt-get install -y $COMMON_TOOLS
 
@@ -84,7 +84,7 @@ cd /usr/local && sudo tar --strip-components 1 -xzf $SRC_PATH
 npm install -g npm@$NPM_VER
 
 # Install python2.7
-apt-get -y install python
+apt-get -y install python2
 
 # ----------------------------------------------------------------
 # Install protocol buffer support

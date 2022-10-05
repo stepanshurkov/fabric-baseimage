@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-FROM --platform=arm64 eclipse-temurin:8-jre
+FROM --platform=arm64 eclipse-temurin:8-jre-focal
 COPY scripts /tmp/scripts
 RUN cd /tmp/scripts && \
     common/packages.sh && \
